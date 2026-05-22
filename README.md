@@ -61,7 +61,7 @@ Supervised by Dr. Craig Ramsay
 ## Architecture
 
 ### System Workflow
-![System Workflow](Whole app.png)
+![System Workflow](Whole%20app.png)
 
 ### Backend Components
 ![Backend Components](backend%20components.png)
