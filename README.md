@@ -58,10 +58,11 @@ CraftUML/
 
 MSc Computer Science Final Year Project · University of Dundee · 2024–2025  
 Supervised by Dr. Craig Ramsay
+
 ## Architecture
 
-### System Workflow
-![System Workflow](Whole%20app.png)
+### End-to-End System Flow
+![End-to-End Flow](whole%20app.png)
 
 ### Backend Components
 ![Backend Components](backend%20components.png)
