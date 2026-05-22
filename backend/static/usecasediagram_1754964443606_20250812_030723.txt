@@ -1,0 +1,21 @@
+@startuml
+actor "Admin" as Admin
+actor "Customer" as Customer
+actor "Guest" as Guest
+
+usecase "Add Cart" as Add_Cart
+usecase "Browse Products" as Browse_Products
+usecase "Checkout" as Checkout
+usecase "Filter Results" as Filter_Results
+usecase "Manage Inventory" as Manage_Inventory
+usecase "Payment Processing" as Payment_Processing
+usecase "Register Account" as Register_Account
+
+Customer --> Browse_Products
+Customer --> Add_Cart
+Customer --> Checkout
+Guest --> Register_Account
+Admin --> Manage_Inventory
+Checkout ..> Payment_Processing : <<include>>
+Filter_Results ..> Browse_Products : <<extend>>
+@enduml

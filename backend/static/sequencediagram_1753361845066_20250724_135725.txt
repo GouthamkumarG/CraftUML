@@ -1,0 +1,12 @@
+@startuml
+!theme plain
+
+participant "Database" as Database
+participant "System" as System
+participant "User" as User
+
+User -> System: Login Request
+System -> Database: Validate Credentials
+Database -> System: User Valid
+System -> User: Login Success
+@enduml

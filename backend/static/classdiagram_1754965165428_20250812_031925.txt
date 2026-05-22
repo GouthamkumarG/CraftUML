@@ -1,0 +1,22 @@
+@startuml
+class "Customer" as Customer {
+  -Balance : String
+  -Cash : String
+  -Funds : String
+  +check() : void
+  +extend() : void
+  +include() : void
+  +verify() : void
+  +want() : void
+  +wish() : void
+  +withdraw() : void
+}
+
+class "Customer Wishes Withdraw Cash" as Customer_Wishes_Withdraw_Cash {
+}
+
+class "Print Receipt" as Print_Receipt {
+}
+
+Customer_Wishes_Withdraw_Cash --|> Print_Receipt
+@enduml

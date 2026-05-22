@@ -1,0 +1,11 @@
+@startuml
+actor "Student" as Student
+actor "Faculty" as Faculty
+actor "Admin" as Admin
+usecase "Generate Reports" as Generate_Reports
+usecase "Create Courses" as Create_Courses
+usecase "Register for Courses" as Register_for_Courses
+Student --> Register_for_Courses
+Faculty --> Create_Courses
+Admin --> Generate_Reports
+@enduml

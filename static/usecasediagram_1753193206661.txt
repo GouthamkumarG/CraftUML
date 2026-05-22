@@ -1,0 +1,15 @@
+@startuml
+!theme plain
+skinparam usecase {
+  BackgroundColor LightBlue
+  BorderColor Navy
+}
+
+actor "Customer" as Customer
+
+usecase "Check Balance" as CheckBalance
+usecase "Withdraw Money" as WithdrawMoney
+
+Customer --> CheckBalance
+Customer --> WithdrawMoney
+@enduml

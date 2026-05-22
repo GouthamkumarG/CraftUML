@@ -1,0 +1,14 @@
+@startuml
+participant Authentication
+participant Deposit
+participant Bank
+participant Cash
+participant System
+participant Response
+participant Atm
+participant Customer
+Customer -> Cash: choose
+System -> Deposit: confirm
+Atm -> Authentication: request
+Bank -> Response: verify
+@enduml

@@ -1,0 +1,16 @@
+@startuml
+participant "Atm" as Atm
+participant "Bank" as Bank
+participant "User" as User
+
+User -> Atm: Insert Card
+Atm -> Bank: Validate Card
+Bank -> Atm: Card Valid
+User -> Atm: Enter PIN
+Atm -> Bank: Verify PIN
+Bank -> Atm: PIN Verified
+User -> Atm: Request Withdrawal
+Atm -> Bank: Check Balance
+Bank -> Atm: Balance Sufficient
+Atm -> User: Dispense Cash
+@enduml

@@ -1,0 +1,8 @@
+@startuml
+participant Cash
+participant System
+participant Customer
+participant Deposit
+Customer -> Cash: choose
+System -> Deposit: confirm
+@enduml

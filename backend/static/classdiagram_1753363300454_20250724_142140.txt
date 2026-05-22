@@ -1,0 +1,3 @@
+_startuml
+_theme plain
+_enduml

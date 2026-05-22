@@ -1,0 +1,19 @@
+@startuml
+actor "Admin" as Admin
+actor "Student" as Student
+actor "Teacher" as Teacher
+
+usecase "Create Assignment" as Create_Assignment
+usecase "Generate Performance Report" as Generate_Performance_Report
+usecase "Grade Submission" as Grade_Submission
+usecase "Manage Users" as Manage_Users
+usecase "Submit Assignment" as Submit_Assignment
+usecase "View Feedback" as View_Feedback
+
+Teacher --> Create_Assignment
+Student --> Submit_Assignment
+Teacher --> Grade_Submission
+Student --> View_Feedback
+Admin --> Manage_Users
+Admin --> Generate_Performance_Report
+@enduml

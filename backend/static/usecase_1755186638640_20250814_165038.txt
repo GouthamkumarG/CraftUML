@@ -1,0 +1,19 @@
+@startuml
+actor "Database" as Database
+actor "System" as System
+actor "User" as User
+
+usecase "Database Validate Credentials" as Database_Validate_Credentials
+usecase "Login Request" as Login_Request
+usecase "Request Dashboard" as Request_Dashboard
+usecase "User Display Dashboard" as User_Display_Dashboard
+usecase "User Login Success" as User_Login_Success
+usecase "User Valid" as User_Valid
+
+User --> Login_Request
+System --> Database_Validate_Credentials
+Database --> User_Valid
+System --> User_Login_Success
+User --> Request_Dashboard
+System --> User_Display_Dashboard
+@enduml

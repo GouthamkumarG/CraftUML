@@ -1,0 +1,21 @@
+@startuml
+actor System
+actor Customer
+actor Atm
+(Then Shows Menu To Customer)
+(Bank Verifies Customer 's Identity And Sends Back Success Response)
+(Confirms Deposit And Prints Receipt)
+(Chooses To Deposit Cash)
+(Wants To Withdraw Cash From Atm)
+(Sends Authentication Request To Bank System)
+(First Asks Customer To Insert Their Card)
+(May Also Request Loan)
+Customer --> (Wants To Withdraw Cash From Atm)
+Atm --> (First Asks Customer To Insert Their Card)
+Atm --> (Sends Authentication Request To Bank System)
+System --> (Bank Verifies Customer 's Identity And Sends Back Success Response)
+Atm --> (Then Shows Menu To Customer)
+Customer --> (Chooses To Deposit Cash)
+System --> (Confirms Deposit And Prints Receipt)
+Customer --> (May Also Request Loan)
+@enduml

@@ -1,0 +1,40 @@
+@startuml
+class "User" as User {
+}
+
+class "Username Password Attributes" as Username_Password_Attributes {
+}
+
+class "Admin" as Admin {
+}
+
+class "Accesslevel" as Accesslevel {
+}
+
+class "Course" as Course {
+}
+
+class "Coursename Coursecode Attributes" as Coursename_Coursecode_Attributes {
+}
+
+class "Student" as Student {
+  -User : String
+  +extend() : void
+}
+
+class "Studentid" as Studentid {
+}
+
+class "Enrolls" as Enrolls {
+  -Course : String
+  -Student : String
+}
+
+User --> Username_Password_Attributes : uses
+Admin --|> User
+Admin --> Accesslevel : uses
+Course --> Coursename_Coursecode_Attributes : uses
+Student --|> User
+Student --> Studentid : uses
+Admin --> Course : uses
+@enduml

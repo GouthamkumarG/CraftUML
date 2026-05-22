@@ -1,0 +1,13 @@
+@startuml
+actor "University Manages Academic Operations Student" as University_Manages_Academic_Operations_Student
+actor "When Registration Occurs Student" as When_Registration_Occurs_Student
+
+usecase "Core Entities User Userid Name Email Attributes Student" as Core_Entities_User_Userid_Name_Email_Attributes_Student
+usecase "Register Courses View Grades Faculty Wants Create Courses Assign Grades" as Register_Courses_View_Grades_Faculty_Wants_Create_Courses_Assign_Grades
+usecase "Submit Registration Request Database Check Course Availability Database Return Available Slots" as Submit_Registration_Request_Database_Check_Course_Availability_Database_Return_Available_Slots
+usecase "User Studentid Course Courseid Coursename Attributes Course Addstudent" as User_Studentid_Course_Courseid_Coursename_Attributes_Course_Addstudent
+
+University_Manages_Academic_Operations_Student --> Register_Courses_View_Grades_Faculty_Wants_Create_Courses_Assign_Grades
+When_Registration_Occurs_Student --> Submit_Registration_Request_Database_Check_Course_Availability_Database_Return_Available_Slots
+User_Studentid_Course_Courseid_Coursename_Attributes_Course_Addstudent ..> Core_Entities_User_Userid_Name_Email_Attributes_Student : <<extend>>
+@enduml

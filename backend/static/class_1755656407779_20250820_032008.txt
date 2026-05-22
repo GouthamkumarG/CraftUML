@@ -1,0 +1,39 @@
+@startuml
+class "User" as User {
+}
+
+class "Id Password Attributes" as Id_Password_Attributes {
+}
+
+class "Librarian" as Librarian {
+}
+
+class "Member" as Member {
+  +borrow() : void
+}
+
+class "Book" as Book {
+}
+
+class "Title Author Isbn Attributes" as Title_Author_Isbn_Attributes {
+}
+
+class "Status" as Status {
+  -Loan : String
+  +attribute() : void
+  +startDate() : void
+}
+
+class "Loan" as Loan {
+}
+
+class "Startdate Duedate Status Attributes" as Startdate_Duedate_Status_Attributes {
+}
+
+User --> Id_Password_Attributes : uses
+Librarian --|> User
+Member --|> User
+Book --> Title_Author_Isbn_Attributes : uses
+Loan --> Startdate_Duedate_Status_Attributes : uses
+Librarian --> Loan : uses
+@enduml

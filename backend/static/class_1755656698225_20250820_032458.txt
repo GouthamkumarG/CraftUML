@@ -1,0 +1,47 @@
+@startuml
+class "User" as User {
+}
+
+class "Username Email Attributes" as Username_Email_Attributes {
+}
+
+class "Seller" as Seller {
+}
+
+class "Buyer" as Buyer {
+}
+
+class "Product" as Product {
+}
+
+class "Productname Description Price Attributes" as Productname_Description_Price_Attributes {
+}
+
+class "Cart" as Cart {
+  -Product : String
+  +contain() : void
+}
+
+class "Cartid Totalprice Attributes" as Cartid_Totalprice_Attributes {
+}
+
+class "Order" as Order {
+  +include() : void
+}
+
+class "Orderid Status Attributes" as Orderid_Status_Attributes {
+}
+
+class "Lists" as Lists {
+  -Product : String
+  -Seller : String
+}
+
+User --> Username_Email_Attributes : uses
+Seller --|> User
+Buyer --|> User
+Product --> Productname_Description_Price_Attributes : uses
+Cart --> Cartid_Totalprice_Attributes : uses
+Order --> Orderid_Status_Attributes : uses
+Cart --> Product : uses
+@enduml

@@ -1,0 +1,19 @@
+@startuml
+actor "Guest" as Guest
+actor "Manager" as Manager
+actor "Receptionist" as Receptionist
+
+usecase "Cancel Reservation" as Cancel_Reservation
+usecase "Check Guest" as Check_Guest
+usecase "Generate Invoice" as Generate_Invoice
+usecase "Make Reservation" as Make_Reservation
+usecase "Search Rooms" as Search_Rooms
+usecase "View Occupancy Report" as View_Occupancy_Report
+
+Guest --> Search_Rooms
+Guest --> Make_Reservation
+Guest --> Cancel_Reservation
+Receptionist --> Check_Guest
+Receptionist --> Generate_Invoice
+Manager --> View_Occupancy_Report
+@enduml

@@ -1,0 +1,14 @@
+@startuml
+participant "Customer" as Customer
+participant "Database" as Database
+participant "Paymentgateway" as Paymentgateway
+participant "Website" as Website
+
+Customer -> Website: Browse Products
+Website -> Database: Fetch Product List
+Database -> Website: Return Products
+Customer -> Website: Add to Cart
+Website -> Paymentgateway: Process Payment
+Paymentgateway -> Website: Payment Success
+Website -> Customer: Order Confirmation
+@enduml

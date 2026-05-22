@@ -1,0 +1,8 @@
+@startuml
+class Customer {
+}
+class System {
+}
+class Bank {
+}
+@enduml

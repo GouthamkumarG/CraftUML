@@ -1,0 +1,29 @@
+@startuml
+class "User" as User {
+}
+
+class "Name Email Attributes" as Name_Email_Attributes {
+}
+
+class "Customer" as Customer {
+  -Order : String
+  -User : String
+  +extend() : void
+  +use() : void
+}
+
+class "Loyaltypoints" as Loyaltypoints {
+}
+
+class "Order" as Order {
+}
+
+class "Items Calculatetotal" as Items_Calculatetotal {
+}
+
+User --> Name_Email_Attributes : uses
+Customer --|> User
+Customer --> Loyaltypoints : uses
+Order --> Items_Calculatetotal : uses
+Customer --> Order : uses
+@enduml

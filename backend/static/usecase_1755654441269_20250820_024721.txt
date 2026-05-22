@@ -1,0 +1,7 @@
+@startuml
+actor "Customer" as Customer
+
+usecase "Withdraw Cash" as Withdraw_Cash
+
+Customer --> Withdraw_Cash
+@enduml

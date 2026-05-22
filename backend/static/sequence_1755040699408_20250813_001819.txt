@@ -1,0 +1,6 @@
+@startuml
+participant "Customer" as Customer
+participant "Order" as Order
+
+Customer -> Order: use
+@enduml

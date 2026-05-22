@@ -1,0 +1,10 @@
+@startuml
+participant Confirmation
+participant Bank
+participant Customer
+participant Atm
+Customer -> Atm: insert
+Atm -> Bank: send
+Bank -> Confirmation: verify
+Atm -> Customer: show
+@enduml

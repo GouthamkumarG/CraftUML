@@ -1,0 +1,47 @@
+@startuml
+!theme plain
+
+actor "Addstudent" as Addstudent
+actor "Admin" as Admin
+actor "Begins When Student" as Begins_When_Student
+actor "Calculate Final Gpa" as Calculate_Final_Gpa
+actor "Create Courses" as Create_Courses
+actor "Database" as Database
+actor "Export Data" as Export_Data
+actor "Faculty" as Faculty
+actor "Generate Reports" as Generate_Reports
+actor "Generate Transcript" as Generate_Transcript
+actor "Grade" as Grade
+actor "Manage Users" as Manage_Users
+actor "Pdf Report" as Pdf_Report
+actor "Register Courses" as Register_Courses
+actor "Reportgenerator" as Reportgenerator
+actor "Reporting Admin" as Reporting_Admin
+actor "Student" as Student
+actor "System" as System
+actor "University Course Management" as University_Course_Management
+actor "University Course Management Manages Academic Operations Students Wish Register Courses View Grades Faculty" as University_Course_Management_Manages_Academic_Operations_Students_Wish_Register_Courses_View_Grades_Faculty
+actor "View Grades" as View_Grades
+actor "When Grading Occurs Faculty" as When_Grading_Occurs_Faculty
+
+usecase "Check Prerequisites View Grades Extends Into Generate Transcript Create Courses Includes Set Course Capacity Assign Grades Extends Into Calculate Final Gpa Generate Reports Includes Export Data" as Check_Prerequisites_View_Grades_Extends_Into_Generate_Transcript_Create_Courses_Includes_Set_Course_Capacity_Assign_Grades_Extends_Into_Calculate_Final_Gpa_Generate_Reports_Includes_Export_Data
+usecase "Core Entities User Class Userid Name Email Password Attributes Student" as Core_Entities_User_Class_Userid_Name_Email_Password_Attributes_Student
+usecase "Create Courses Assign Grades" as Create_Courses_Assign_Grades
+usecase "Create Courses Assign Grades Admin Wishes Manage Users Generate Reports" as Create_Courses_Assign_Grades_Admin_Wishes_Manage_Users_Generate_Reports
+usecase "Enter Grade Database Store Grade Database Confirm Storage Faculty Grade Saved Successfully Student Send Grade Notification" as Enter_Grade_Database_Store_Grade_Database_Confirm_Storage_Faculty_Grade_Saved_Successfully_Student_Send_Grade_Notification
+usecase "Into Generate Transcript Create Courses Includes Set Course Capacity Assign Grades Extends Into Calculate Final Gpa Generate Reports Includes Export Data" as Into_Generate_Transcript_Create_Courses_Includes_Set_Course_Capacity_Assign_Grades_Extends_Into_Calculate_Final_Gpa_Generate_Reports_Includes_Export_Data
+usecase "Manage Users Generate Reports" as Manage_Users_Generate_Reports
+usecase "Registration Courses" as Registration_Courses
+usecase "Registration Courses Includes Check Prerequisites View Grades" as Registration_Courses_Includes_Check_Prerequisites_View_Grades
+usecase "Request Report Database Query Student Data Database Return Data Reportgenerator Generate Report Reportgenerator Return Pdf Report Admin Deliver Report" as Request_Report_Database_Query_Student_Data_Database_Return_Data_Reportgenerator_Generate_Report_Reportgenerator_Return_Pdf_Report_Admin_Deliver_Report
+usecase "Submit Registration Request Database Check Course Availability Database Return Available Slots Student Confirm Registration" as Submit_Registration_Request_Database_Check_Course_Availability_Database_Return_Available_Slots_Student_Confirm_Registration
+usecase "User Class Studentid Major Attributes Faculty Extends User Class Facultyid Department Attributes Admin Extends User Class Adminid Permissions Attributes" as User_Class_Studentid_Major_Attributes_Faculty_Extends_User_Class_Facultyid_Department_Attributes_Admin_Extends_User_Class_Adminid_Permissions_Attributes
+
+University_Course_Management_Manages_Academic_Operations_Students_Wish_Register_Courses_View_Grades_Faculty --> Create_Courses_Assign_Grades_Admin_Wishes_Manage_Users_Generate_Reports
+Begins_When_Student --> Submit_Registration_Request_Database_Check_Course_Availability_Database_Return_Available_Slots_Student_Confirm_Registration
+When_Grading_Occurs_Faculty --> Enter_Grade_Database_Store_Grade_Database_Confirm_Storage_Faculty_Grade_Saved_Successfully_Student_Send_Grade_Notification
+Reporting_Admin --> Request_Report_Database_Query_Student_Data_Database_Return_Data_Reportgenerator_Generate_Report_Reportgenerator_Return_Pdf_Report_Admin_Deliver_Report
+Registration_Courses ..> Check_Prerequisites_View_Grades_Extends_Into_Generate_Transcript_Create_Courses_Includes_Set_Course_Capacity_Assign_Grades_Extends_Into_Calculate_Final_Gpa_Generate_Reports_Includes_Export_Data : <<include>>
+User_Class_Studentid_Major_Attributes_Faculty_Extends_User_Class_Facultyid_Department_Attributes_Admin_Extends_User_Class_Adminid_Permissions_Attributes ..> Core_Entities_User_Class_Userid_Name_Email_Password_Attributes_Student : <<extend>>
+Into_Generate_Transcript_Create_Courses_Includes_Set_Course_Capacity_Assign_Grades_Extends_Into_Calculate_Final_Gpa_Generate_Reports_Includes_Export_Data ..> Registration_Courses_Includes_Check_Prerequisites_View_Grades : <<extend>>
+@enduml

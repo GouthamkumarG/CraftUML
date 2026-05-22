@@ -1,0 +1,14 @@
+@startuml
+actor Bank
+actor Atm
+actor Customer
+actor System
+(Requests Customer 's Authentication)
+(Verifies Customer Sends Back Success Response)
+(Confirms Deposit Prints Receipt)
+(Chooses Deposit Cash)
+Customer --> (Chooses Deposit Cash)
+System --> (Confirms Deposit Prints Receipt)
+Atm --> (Requests Customer 's Authentication)
+Bank --> (Verifies Customer Sends Back Success Response)
+@enduml

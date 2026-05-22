@@ -1,0 +1,39 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class Reporthandler <<Abstract>> {
+  -reports : Reports
+}
+class Faultreporthandler <<Concrete>> {
+  +extend() : void
+}
+class Report <<Entity>> {
+  -content : string
+  -method : string
+  -timestamp : string
+}
+class Reportcommunicator <<Interface>> {
+  +define() : void
+}
+class Snscommunicator <<Concrete>> {
+  -endpointurl : string
+  -endpointurl : Endpointurl
+  +provide() : void
+}
+class Emailcommunication <<Concrete>> {
+  -emailaddress : string
+  -emailaddress : Emailaddress
+}
+class Twittercommunicator <<Concrete>> {
+  -implements : string
+}
+Emailcommunication --> Emailaddress
+Reporthandler --> Reports
+Snscommunicator --> Endpointurl
+Snscommunicator ..|> Reportcommunicator
+Snscommunicator ..|> Twittercommunicator
+Twittercommunicator ..|> Closeconnection
+Twittercommunicator ..|> Implements
+Twittercommunicator ..|> Openconnection
+Twittercommunicator ..|> Sendreport
+@enduml

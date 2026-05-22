@@ -1,0 +1,9 @@
+@startuml
+!theme plain
+
+actor "Customer" as Customer
+actor "Order" as Order
+actor "Paypal Payment Gateway" as Paypal_Payment_Gateway
+
+
+@enduml

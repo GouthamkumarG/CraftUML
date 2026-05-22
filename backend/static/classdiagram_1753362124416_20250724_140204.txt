@@ -1,0 +1,195 @@
+@startuml
+!theme plain
+
+class "Faculty" as Faculty {
+  -Adminid : String
+  -Aggregation : String
+  -Analytics : String
+  -Attributes : String
+  -Core : String
+  -Course : String
+  -Courses : String
+  -Data : String
+  -Database : String
+  -Department : String
+  -Email : String
+  -Enrollment : String
+  -Enrollments : String
+  -Entities : String
+  -Grades : String
+  -Name : String
+  -Operations : String
+  -Password : String
+  -Permissions : String
+  -Registration : String
+  -Student : String
+  -Students : String
+  -User : String
+  +assign() : void
+  +create() : void
+  +extend() : void
+  +grade() : void
+  +link() : void
+  +manage() : void
+  +occur() : void
+  +register() : void
+  +send() : void
+  +track() : void
+  +use() : void
+  +userId() : void
+  +want() : void
+  +wish() : void
+}
+
+class "Students" as Students {
+  -Courses : String
+  -Operations : String
+  +create() : void
+  +manage() : void
+  +register() : void
+  +want() : void
+  +wish() : void
+}
+
+class "University Course Management" as University_Course_Management {
+}
+
+class "Academic Operations Students Wish Register Courses View Grades Faculty Wants Create Courses Assign Grades Admin Wishes Manage Users Generate Reports" as Academic_Operations_Students_Wish_Register_Courses_View_Grades_Faculty_Wants_Create_Courses_Assign_Grades_Admin_Wishes_Manage_Users_Generate_Reports {
+}
+
+class "Database" as Database {
+  -Availability : String
+  -Course : String
+  -Database : String
+  -Registration : String
+  -Reporting : String
+  +begin() : void
+  +check() : void
+  +grade() : void
+  +occur() : void
+  +send() : void
+}
+
+class "Workflow" as Workflow {
+  -Availability : String
+  -Course : String
+  -Database : String
+  -Registration : String
+  +begin() : void
+  +check() : void
+}
+
+class "Student" as Student {
+  -Adminid : String
+  -Aggregation : String
+  -Analytics : String
+  -Attributes : String
+  -Availability : String
+  -Core : String
+  -Course : String
+  -Data : String
+  -Database : String
+  -Department : String
+  -Email : String
+  -Enrollment : String
+  -Enrollments : String
+  -Entities : String
+  -Grades : String
+  -Name : String
+  -Password : String
+  -Permissions : String
+  -Registration : String
+  -Student : String
+  -Students : String
+  -User : String
+  +assign() : void
+  +begin() : void
+  +check() : void
+  +extend() : void
+  +grade() : void
+  +link() : void
+  +occur() : void
+  +send() : void
+  +track() : void
+  +use() : void
+  +userId() : void
+}
+
+class "Core Entities User Userid Name Email Password Attributes Student" as Core_Entities_User_Userid_Name_Email_Password_Attributes_Student {
+}
+
+class "User Studentid Major Attributes Faculty Extends User Facultyid Department Attributes Admin Extends User Adminid Permissions Attributes" as User_Studentid_Major_Attributes_Faculty_Extends_User_Facultyid_Department_Attributes_Admin_Extends_User_Adminid_Permissions_Attributes {
+}
+
+class "The system" as The_system {
+}
+
+class "Core Entities User Userid Name Email Password Attributes Student Extends User Studentid Major Attributes Faculty Extends User Facultyid Department Attributes Admin Extends User Adminid Permissions Attributes" as Core_Entities_User_Userid_Name_Email_Password_Attributes_Student_Extends_User_Studentid_Major_Attributes_Faculty_Extends_User_Facultyid_Department_Attributes_Admin_Extends_User_Adminid_Permissions_Attributes {
+}
+
+class "Course" as Course {
+  -Aggregation : String
+  -Analytics : String
+  -Course : String
+  -Data : String
+  -Enrollment : String
+  -Enrollments : String
+  -Grades : String
+  -Registration : String
+  -Student : String
+  -Students : String
+  +assign() : void
+  +link() : void
+  +track() : void
+  +use() : void
+}
+
+class "Courseid Coursename Credits Capacity Attributes Course Addstudent Removestudent Methods Registration Registrationid Registrationdate Status Attributes Registration Confirmregistration" as Courseid_Coursename_Credits_Capacity_Attributes_Course_Addstudent_Removestudent_Methods_Registration_Registrationid_Registrationdate_Status_Attributes_Registration_Confirmregistration {
+}
+
+class "Grade" as Grade {
+}
+
+class "Gradeid Lettergrade Numericgrade Attributes Grade Calculategpa Report Reportid Reporttype Generateddate Attributes Report Generatepdf" as Gradeid_Lettergrade_Numericgrade_Attributes_Grade_Calculategpa_Report_Reportid_Reporttype_Generateddate_Attributes_Report_Generatepdf {
+}
+
+class "Report" as Report {
+  -Aggregation : String
+  -Analytics : String
+  -Course : String
+  -Data : String
+  -Enrollment : String
+  -Enrollments : String
+  -Grades : String
+  -Registration : String
+  -Student : String
+  -Students : String
+  +assign() : void
+  +link() : void
+  +track() : void
+  +use() : void
+}
+
+class "Registration Course Enrollment Course Uses Registration Track Enrollments Faculty Uses Grade Assign Grades Grade Uses Student Link Grades Students Admin Uses Report Analytics Report Uses Student Course Data Aggregation" as Registration_Course_Enrollment_Course_Uses_Registration_Track_Enrollments_Faculty_Uses_Grade_Assign_Grades_Grade_Uses_Student_Link_Grades_Students_Admin_Uses_Report_Analytics_Report_Uses_Student_Course_Data_Aggregation {
+}
+
+class "Registration" as Registration {
+  -Courses : String
+  +extend() : void
+  +include() : void
+}
+
+class "Registration Courses Includes Check Prerequisites View Grades" as Registration_Courses_Includes_Check_Prerequisites_View_Grades {
+}
+
+class "Into Generate Transcript Create Courses Includes Set Course Capacity Assign Grades Extends Into Calculate Final Gpa Generate Reports Includes Export Data" as Into_Generate_Transcript_Create_Courses_Includes_Set_Course_Capacity_Assign_Grades_Extends_Into_Calculate_Final_Gpa_Generate_Reports_Includes_Export_Data {
+}
+
+University_Course_Management --> Academic_Operations_Students_Wish_Register_Courses_View_Grades_Faculty_Wants_Create_Courses_Assign_Grades_Admin_Wishes_Manage_Users_Generate_Reports : uses
+Core_Entities_User_Userid_Name_Email_Password_Attributes_Student --|> User_Studentid_Major_Attributes_Faculty_Extends_User_Facultyid_Department_Attributes_Admin_Extends_User_Adminid_Permissions_Attributes
+The_system --> Core_Entities_User_Userid_Name_Email_Password_Attributes_Student_Extends_User_Studentid_Major_Attributes_Faculty_Extends_User_Facultyid_Department_Attributes_Admin_Extends_User_Adminid_Permissions_Attributes : uses
+Course --> Courseid_Coursename_Credits_Capacity_Attributes_Course_Addstudent_Removestudent_Methods_Registration_Registrationid_Registrationdate_Status_Attributes_Registration_Confirmregistration : uses
+Grade --> Gradeid_Lettergrade_Numericgrade_Attributes_Grade_Calculategpa_Report_Reportid_Reporttype_Generateddate_Attributes_Report_Generatepdf : uses
+Student --> Registration_Course_Enrollment_Course_Uses_Registration_Track_Enrollments_Faculty_Uses_Grade_Assign_Grades_Grade_Uses_Student_Link_Grades_Students_Admin_Uses_Report_Analytics_Report_Uses_Student_Course_Data_Aggregation : uses
+Registration_Courses_Includes_Check_Prerequisites_View_Grades --|> Into_Generate_Transcript_Create_Courses_Includes_Set_Course_Capacity_Assign_Grades_Extends_Into_Calculate_Final_Gpa_Generate_Reports_Includes_Export_Data
+@enduml

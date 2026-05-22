@@ -1,0 +1,42 @@
+@startuml
+class "Customer" as Customer {
+  +use() : void
+}
+
+class "Name Email Attributes" as Name_Email_Attributes {
+}
+
+class "Bankaccount" as Bankaccount {
+}
+
+class "Accountnumber Balance Attributes" as Accountnumber_Balance_Attributes {
+}
+
+class "Atm" as Atm {
+}
+
+class "Location" as Location {
+}
+
+class "Bankteller" as Bankteller {
+}
+
+class "Employeeid Name Attributes" as Employeeid_Name_Attributes {
+}
+
+class "Admin" as Admin {
+}
+
+class "Username Accesslevel Attributes" as Username_Accesslevel_Attributes {
+}
+
+Customer --> Name_Email_Attributes : uses
+Bankaccount --> Accountnumber_Balance_Attributes : uses
+Atm --> Location : uses
+Bankteller --> Employeeid_Name_Attributes : uses
+Admin --> Username_Accesslevel_Attributes : uses
+Customer --> Bankaccount : uses
+Customer --> Atm : uses
+Bankteller --> Bankaccount : uses
+Admin --> Bankaccount : uses
+@enduml

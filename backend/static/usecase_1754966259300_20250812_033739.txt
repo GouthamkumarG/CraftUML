@@ -1,0 +1,15 @@
+@startuml
+actor "Admin" as Admin
+actor "Professor" as Professor
+actor "Student" as Student
+
+usecase "Enroll Course" as Enroll_Course
+usecase "Grade Assignments" as Grade_Assignments
+usecase "Manage Courses" as Manage_Courses
+usecase "View Grades" as View_Grades
+
+Student --> Enroll_Course
+Student --> View_Grades
+Professor --> Grade_Assignments
+Admin --> Manage_Courses
+@enduml

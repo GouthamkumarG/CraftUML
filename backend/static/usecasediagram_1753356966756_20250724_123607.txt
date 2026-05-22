@@ -1,0 +1,21 @@
+@startuml
+!theme plain
+
+actor "Admin" as Admin
+actor "Atm" as Atm
+actor "Customer" as Customer
+
+usecase "Check Balance" as Check_Balance
+usecase "Deposit Cash" as Deposit_Cash
+usecase "Manage Users" as Manage_Users
+usecase "Print Receipt" as Print_Receipt
+usecase "Refill Cash" as Refill_Cash
+usecase "Withdraw Cash" as Withdraw_Cash
+
+Customer --> Withdraw_Cash
+Customer --> Deposit_Cash
+Admin --> Manage_Users
+Atm --> Refill_Cash
+Withdraw_Cash ..> Check_Balance : <<include>>
+Print_Receipt ..> Deposit_Cash : <<extend>>
+@enduml

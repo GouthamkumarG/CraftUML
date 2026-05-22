@@ -1,0 +1,10 @@
+@startuml
+actor Customer
+(Deposit Cash)
+(Print Statement)
+(Withdraw Cash)
+Customer --> (Withdraw Cash)
+Customer --> (Deposit Cash)
+Customer --> (Withdraw Cash)
+(Withdraw Cash) .> (Print Statement) : <<extend>>
+@enduml

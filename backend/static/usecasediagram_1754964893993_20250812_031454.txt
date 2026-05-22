@@ -1,0 +1,29 @@
+@startuml
+actor "Admin" as Admin
+actor "Bank Teller" as Bank_Teller
+actor "Customer" as Customer
+
+usecase "Assist Customer" as Assist_Customer
+usecase "Check Balance" as Check_Balance
+usecase "Customer Wishes Transfer Funds" as Customer_Wishes_Transfer_Funds
+usecase "Customer Wishes Withdraw Cash" as Customer_Wishes_Withdraw_Cash
+usecase "Generate Reports" as Generate_Reports
+usecase "Manage" as Manage
+usecase "Print Receipt" as Print_Receipt
+usecase "Transfer Funds" as Transfer_Funds
+usecase "Transfer Funds Includes Verify Account" as Transfer_Funds_Includes_Verify_Account
+usecase "Verify Account" as Verify_Account
+usecase "Withdraw Cash" as Withdraw_Cash
+usecase "Withdraw Cash Extending Into Print Receipt" as Withdraw_Cash_Extending_Into_Print_Receipt
+
+Customer --> Withdraw_Cash
+Customer --> Check_Balance
+Customer --> Transfer_Funds
+Bank_Teller --> Assist_Customer
+Customer --> Withdraw_Cash_Extending_Into_Print_Receipt
+Customer --> Transfer_Funds_Includes_Verify_Account
+Admin --> Manage
+Admin --> Generate_Reports
+Customer_Wishes_Transfer_Funds ..> Verify_Account : <<include>>
+Print_Receipt ..> Customer_Wishes_Withdraw_Cash : <<extend>>
+@enduml

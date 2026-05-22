@@ -1,0 +1,16 @@
+@startuml
+!theme plain
+
+actor "Customer" as Customer
+
+usecase "Customer Wants Withdraw Cash" as CustomerWantsWithdrawCash
+usecase "Deposit Cash" as DepositCash
+usecase "Print Statement" as PrintStatement
+usecase "Withdraw Cash" as WithdrawCash
+usecase "Withdraw Cash Extending Into Print Statement" as WithdrawCashExtendingIntoPrintStatement
+
+Customer --> WithdrawCash
+Customer --> DepositCash
+Customer --> WithdrawCashExtendingIntoPrintStatement
+PrintStatement ..> CustomerWantsWithdrawCash : <<extend>>
+@enduml

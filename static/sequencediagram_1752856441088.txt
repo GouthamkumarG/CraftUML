@@ -1,0 +1,18 @@
+@startuml
+participant Response
+participant Cash
+participant Atm
+participant System
+participant Customer
+participant Deposit
+participant Loan
+participant Card
+Customer -> Atm: want
+Atm -> Card: ask
+Atm -> System: send
+System -> Response: verify
+Atm -> Customer: show
+Customer -> Cash: choose
+System -> Deposit: confirm
+Customer -> Loan: request
+@enduml

@@ -1,0 +1,8 @@
+@startuml
+!theme plain
+
+actor "Deposit Cash" as Deposit_Cash
+actor "Withdraw Cash" as Withdraw_Cash
+
+
+@enduml

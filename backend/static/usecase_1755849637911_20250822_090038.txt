@@ -1,0 +1,7 @@
+@startuml
+
+usecase "Customer" as Customer
+usecase "User" as User
+
+User ..> Customer : <<extend>>
+@enduml

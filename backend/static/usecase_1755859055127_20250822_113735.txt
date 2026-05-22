@@ -1,0 +1,19 @@
+@startuml
+actor "Admin" as Admin
+actor "Officer" as Officer
+actor "Resident" as Resident
+
+usecase "Approve Permit" as Approve_Permit
+usecase "Manage Users" as Manage_Users
+usecase "Pay Council Tax" as Pay_Council_Tax
+usecase "Report Issue" as Report_Issue
+usecase "Track Request" as Track_Request
+usecase "Update Case Status" as Update_Case_Status
+
+Resident --> Report_Issue
+Resident --> Pay_Council_Tax
+Officer --> Approve_Permit
+Officer --> Update_Case_Status
+Admin --> Manage_Users
+Resident --> Track_Request
+@enduml

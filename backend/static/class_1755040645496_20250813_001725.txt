@@ -1,0 +1,39 @@
+@startuml
+class "Vehicle" as Vehicle {
+}
+
+class "Brand Model Year Attributes" as Brand_Model_Year_Attributes {
+}
+
+class "Car" as Car {
+  -Vehicle : String
+  +extend() : void
+}
+
+class "Numberofdoors" as Numberofdoors {
+}
+
+class "Motorcycle" as Motorcycle {
+  -Vehicle : String
+  +extend() : void
+}
+
+class "Enginetype" as Enginetype {
+}
+
+class "Truck" as Truck {
+  -Vehicle : String
+  +extend() : void
+}
+
+class "Loadcapacity" as Loadcapacity {
+}
+
+Vehicle --> Brand_Model_Year_Attributes : uses
+Car --|> Vehicle
+Car --> Numberofdoors : uses
+Motorcycle --|> Vehicle
+Motorcycle --> Enginetype : uses
+Truck --|> Vehicle
+Truck --> Loadcapacity : uses
+@enduml

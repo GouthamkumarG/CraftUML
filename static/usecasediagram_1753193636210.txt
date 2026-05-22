@@ -1,0 +1,16 @@
+@startuml
+!theme plain
+skinparam usecase {
+  BackgroundColor LightBlue
+  BorderColor Navy
+}
+
+actor "Text Customer" as TextCustomer
+actor "Text User" as TextUser
+
+usecase "System Loginnsystem Db Validate" as SystemLoginnsystemDbValidate
+usecase "Withdraw Cash" as WithdrawCash
+
+TextCustomer --> WithdrawCash
+TextUser --> SystemLoginnsystemDbValidate
+@enduml

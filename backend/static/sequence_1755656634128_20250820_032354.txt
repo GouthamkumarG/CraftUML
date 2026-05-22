@@ -1,0 +1,14 @@
+@startuml
+participant "Inventorysystem" as Inventorysystem
+participant "Onlinestore" as Onlinestore
+participant "Paymentgateway" as Paymentgateway
+participant "Shopper" as Shopper
+
+Shopper -> Onlinestore: Add Item to Cart
+Onlinestore -> Inventorysystem: Check Stock
+Inventorysystem -> Onlinestore: Stock Available
+Shopper -> Onlinestore: Proceed to Checkout
+Onlinestore -> Paymentgateway: Process Payment
+Paymentgateway -> Onlinestore: Payment Approved
+Onlinestore -> Shopper: Order Confirmation
+@enduml

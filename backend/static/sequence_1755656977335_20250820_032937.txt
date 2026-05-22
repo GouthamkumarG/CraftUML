@@ -1,0 +1,16 @@
+@startuml
+participant "Driver" as Driver
+participant "Matchingservice" as Matchingservice
+participant "Paymentgateway" as Paymentgateway
+participant "Rideapp" as Rideapp
+participant "Rider" as Rider
+
+Rider -> Rideapp: Request Ride
+Rideapp -> Matchingservice: Find Driver
+Matchingservice -> Driver: Offer Ride
+Driver -> Matchingservice: Accept Ride
+Matchingservice -> Rideapp: Driver Assigned
+Rideapp -> Paymentgateway: Pre-authorize Fare
+Paymentgateway -> Rideapp: Pre-auth Success
+Rideapp -> Rider: Driver Details
+@enduml

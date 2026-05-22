@@ -1,0 +1,18 @@
+@startuml
+!theme plain
+
+class "Customer" as Customer {
+  -Cash : String
+  +extend() : void
+  +want() : void
+  +withdraw() : void
+}
+
+class "Customer Wants Withdraw Cash" as Customer_Wants_Withdraw_Cash {
+}
+
+class "Print Statement" as Print_Statement {
+}
+
+Customer_Wants_Withdraw_Cash --|> Print_Statement
+@enduml

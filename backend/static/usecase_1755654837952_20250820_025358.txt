@@ -1,0 +1,19 @@
+@startuml
+actor "Admin" as Admin
+actor "Customer" as Customer
+actor "Delivery Staff" as Delivery_Staff
+
+usecase "Generate Reports" as Generate_Reports
+usecase "Manage Inventory" as Manage_Inventory
+usecase "Place Order" as Place_Order
+usecase "Search Products" as Search_Products
+usecase "Track Delivery" as Track_Delivery
+usecase "Update Delivery Status" as Update_Delivery_Status
+
+Customer --> Search_Products
+Customer --> Place_Order
+Customer --> Track_Delivery
+Admin --> Manage_Inventory
+Admin --> Generate_Reports
+Delivery_Staff --> Update_Delivery_Status
+@enduml

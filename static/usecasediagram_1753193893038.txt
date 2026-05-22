@@ -1,0 +1,15 @@
+@startuml
+!theme plain
+skinparam usecase {
+  BackgroundColor LightBlue
+  BorderColor Navy
+}
+
+actor "Customer" as Customer
+
+usecase "Print Statement" as PrintStatement
+usecase "Withdraw Cash" as WithdrawCash
+
+Customer --> WithdrawCash
+PrintStatement ..> WithdrawCash : <<extend>>
+@enduml

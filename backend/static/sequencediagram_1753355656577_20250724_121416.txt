@@ -1,0 +1,8 @@
+@startuml
+!theme plain
+
+participant "Order" as Order
+participant "Paypal Payment Gateway" as Paypal_Payment_Gateway
+
+Order -> Paypal_Payment_Gateway: choose
+@enduml

@@ -1,0 +1,6 @@
+@startuml
+participant Cash
+participant Customer
+Customer -> Cash: want
+Customer -> Cash: want
+@enduml

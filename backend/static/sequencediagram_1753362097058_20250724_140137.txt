@@ -1,0 +1,21 @@
+@startuml
+!theme plain
+
+participant "Admin" as Admin
+participant "Calculate Final Gpa" as Calculate_Final_Gpa
+participant "Create Courses" as Create_Courses
+participant "Generate Transcript" as Generate_Transcript
+participant "Grade" as Grade
+participant "Reporting Admin" as Reporting_Admin
+participant "System" as System
+participant "University Course Management" as University_Course_Management
+participant "When Grading Occurs Faculty" as When_Grading_Occurs_Faculty
+participant "Workflow Begins When Student" as Workflow_Begins_When_Student
+
+University_Course_Management -> Create_Courses: want
+Workflow_Begins_When_Student -> System: Submit Registration Request. System -> Database: Check Course Availability. Database -> System: Return Available Slots. System -> Student: Confirm Registration.
+When_Grading_Occurs_Faculty -> System: Enter Grade. System -> Database: Store Grade. Database -> System: Confirm Storage. System -> Faculty: Grade Saved Successfully. System -> Student: Send Grade Notification.
+Reporting_Admin -> System: Request Report. System -> Database: Query Student Data. Database -> System: Return Data. System -> ReportGenerator: Generate Report. ReportGenerator -> System: Return PDF Report. System -> Admin: Deliver Report.
+Admin -> Grade: track
+Generate_Transcript -> Calculate_Final_Gpa: extend
+@enduml

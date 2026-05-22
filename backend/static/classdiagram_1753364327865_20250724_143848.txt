@@ -1,0 +1,23 @@
+@startuml
+class "Student" as Student {
+  -Courses : String
+  -Grades : String
+  +register() : void
+  +view() : void
+  +wish() : void
+}
+
+class "Faculty" as Faculty {
+  -Courses : String
+  +create() : void
+  +want() : void
+}
+
+class "View Grades" as View_Grades {
+}
+
+class "Into Generate Transcript" as Into_Generate_Transcript {
+}
+
+View_Grades --|> Into_Generate_Transcript
+@enduml

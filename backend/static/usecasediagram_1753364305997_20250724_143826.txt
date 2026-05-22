@@ -1,0 +1,22 @@
+@startuml
+actor "Admin" as Admin
+actor "Faculty" as Faculty
+actor "Librarian" as Librarian
+actor "Student" as Student
+
+usecase "Check Prerequisites" as Check_Prerequisites
+usecase "Create Courses" as Create_Courses
+usecase "Generate Reports" as Generate_Reports
+usecase "Into Generate Transcript" as Into_Generate_Transcript
+usecase "Manage Books" as Manage_Books
+usecase "Register Courses" as Register_Courses
+usecase "View Grades" as View_Grades
+
+Student --> Register_Courses
+Faculty --> Create_Courses
+Admin --> Generate_Reports
+Librarian --> Manage_Books
+Student --> View_Grades
+Register_Courses ..> Check_Prerequisites : <<include>>
+Into_Generate_Transcript ..> View_Grades : <<extend>>
+@enduml

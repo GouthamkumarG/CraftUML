@@ -1,0 +1,8 @@
+@startuml
+actor System
+actor Customer
+(Confirms Deposit And Prints Receipt)
+(Chooses To Deposit Cash)
+Customer --> (Chooses To Deposit Cash)
+System --> (Confirms Deposit And Prints Receipt)
+@enduml

@@ -1,0 +1,28 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class Reporthandler <<Abstract>> {
+  -methods : Methods
+  -reports : Reports
+}
+class Faultreporthandler <<Concrete>> {
+  +extend() : void
+}
+class Report <<Entity>> {
+  -content : string
+  -method : string
+  -timestamp : string
+}
+class Reportcommunicator <<Interface>> {
+}
+class Snscommunicator <<Concrete>> {
+}
+class Emailcommunication <<Concrete>> {
+}
+class Twittercommunicator <<Concrete>> {
+}
+Reporthandler --> Methods
+Reporthandler --> Reports
+Snscommunicator ..|> Reportcommunicator
+Snscommunicator ..|> Twittercommunicator
+@enduml

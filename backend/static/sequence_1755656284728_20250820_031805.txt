@@ -1,0 +1,15 @@
+@startuml
+participant "Customer" as Customer
+participant "Driver" as Driver
+participant "Driverservice" as Driverservice
+participant "Foodapp" as Foodapp
+participant "Restaurant" as Restaurant
+
+Customer -> Foodapp: Place Order
+Foodapp -> Restaurant: Send Order Details
+Restaurant -> Foodapp: Confirm Preparation
+Foodapp -> Driverservice: Assign Driver
+Driverservice -> Driver: Pickup Request
+Driver -> Customer: Order Delivered
+Foodapp -> Customer: Delivery Confirmation
+@enduml

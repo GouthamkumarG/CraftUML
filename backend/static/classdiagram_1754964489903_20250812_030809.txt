@@ -1,0 +1,27 @@
+@startuml
+class "Customer" as Customer {
+  -Cart : String
+  -Checkout : String
+  -Products : String
+  +add() : void
+  +browse() : void
+  +want() : void
+  +wish() : void
+}
+
+class "Guest" as Guest {
+  +want() : void
+}
+
+class "Checkout" as Checkout {
+  +include() : void
+}
+
+class "Browse Products" as Browse_Products {
+}
+
+class "Filter Results" as Filter_Results {
+}
+
+Browse_Products --|> Filter_Results
+@enduml

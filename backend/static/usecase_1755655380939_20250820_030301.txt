@@ -1,0 +1,19 @@
+@startuml
+actor "Admin" as Admin
+actor "Agent" as Agent
+actor "Traveler" as Traveler
+
+usecase "Book Ticket" as Book_Ticket
+usecase "Check Online" as Check_Online
+usecase "Download Boarding Pass" as Download_Boarding_Pass
+usecase "Manage Bookings" as Manage_Bookings
+usecase "Search Flights" as Search_Flights
+usecase "View Reports" as View_Reports
+
+Traveler --> Search_Flights
+Traveler --> Book_Ticket
+Traveler --> Check_Online
+Agent --> Manage_Bookings
+Traveler --> Download_Boarding_Pass
+Admin --> View_Reports
+@enduml

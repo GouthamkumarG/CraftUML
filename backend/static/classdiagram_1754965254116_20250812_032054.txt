@@ -1,0 +1,116 @@
+@startuml
+class "Customer" as Customer {
+  +use() : void
+}
+
+class "Customerid Name Email Phonenumber Attributes" as Customerid_Name_Email_Phonenumber_Attributes {
+}
+
+class "Methods" as Methods {
+  -Checkbalance : String
+  -Customer : String
+  -Processtransfer : String
+  -Processwithdrawal : String
+  -Requestassistance : String
+  -Transferfunds : String
+  -Verifypin : String
+  +withdrawCash() : void
+}
+
+class "Withdrawcash Checkbalance Transferfunds Requestassistance Methods" as Withdrawcash_Checkbalance_Transferfunds_Requestassistance_Methods {
+}
+
+class "Bankaccount" as Bankaccount {
+}
+
+class "Accountnumber Balance Accounttype Attributes" as Accountnumber_Balance_Accounttype_Attributes {
+}
+
+class "Getbalance Deposit Withdraw Transfer Verifyaccount Methods" as Getbalance_Deposit_Withdraw_Transfer_Verifyaccount_Methods {
+}
+
+class "Atm" as Atm {
+}
+
+class "Atmid Location Cashavailable Attributes" as Atmid_Location_Cashavailable_Attributes {
+}
+
+class "Printreceipt" as Printreceipt {
+  -Dispensecash : String
+  -Displaybalance : String
+  -Methods : String
+  -Processtransaction : String
+}
+
+class "Dispensecash Printreceipt Displaybalance Processtransaction Methods" as Dispensecash_Printreceipt_Displaybalance_Processtransaction_Methods {
+}
+
+class "Bankteller" as Bankteller {
+}
+
+class "Employeeid Name Branch Attributes" as Employeeid_Name_Branch_Attributes {
+}
+
+class "Assistcustomer Accessaccount Processtransaction Methods" as Assistcustomer_Accessaccount_Processtransaction_Methods {
+}
+
+class "Admin" as Admin {
+}
+
+class "Adminid Username Accesslevel Attributes" as Adminid_Username_Accesslevel_Attributes {
+}
+
+class "Managesystem Generatereports Updatesettings Viewlogs Methods" as Managesystem_Generatereports_Updatesettings_Viewlogs_Methods {
+}
+
+class "Banksystem" as Banksystem {
+}
+
+class "Systemid Version Attributes" as Systemid_Version_Attributes {
+}
+
+class "Validatecard Verifypin Checkbalance Processwithdrawal Processtransfer Generatereport Methods" as Validatecard_Verifypin_Checkbalance_Processwithdrawal_Processtransfer_Generatereport_Methods {
+}
+
+class "Transaction" as Transaction {
+}
+
+class "Transactionid Timestamp Amount Type Attributes" as Transactionid_Timestamp_Amount_Type_Attributes {
+}
+
+class "Execute Rollback Getstatus Methods" as Execute_Rollback_Getstatus_Methods {
+}
+
+class "Report" as Report {
+}
+
+class "Reportid Generateddate Reporttype Data Attributes" as Reportid_Generateddate_Reporttype_Data_Attributes {
+}
+
+class "Generate Export Methods" as Generate_Export_Methods {
+}
+
+Customer --> Customerid_Name_Email_Phonenumber_Attributes : uses
+Customer --> Withdrawcash_Checkbalance_Transferfunds_Requestassistance_Methods : uses
+Bankaccount --> Accountnumber_Balance_Accounttype_Attributes : uses
+Bankaccount --> Getbalance_Deposit_Withdraw_Transfer_Verifyaccount_Methods : uses
+Atm --> Atmid_Location_Cashavailable_Attributes : uses
+Atm --> Dispensecash_Printreceipt_Displaybalance_Processtransaction_Methods : uses
+Bankteller --> Employeeid_Name_Branch_Attributes : uses
+Bankteller --> Assistcustomer_Accessaccount_Processtransaction_Methods : uses
+Admin --> Adminid_Username_Accesslevel_Attributes : uses
+Admin --> Managesystem_Generatereports_Updatesettings_Viewlogs_Methods : uses
+Banksystem --> Systemid_Version_Attributes : uses
+Banksystem --> Validatecard_Verifypin_Checkbalance_Processwithdrawal_Processtransfer_Generatereport_Methods : uses
+Transaction --> Transactionid_Timestamp_Amount_Type_Attributes : uses
+Transaction --> Execute_Rollback_Getstatus_Methods : uses
+Report --> Reportid_Generateddate_Reporttype_Data_Attributes : uses
+Report --> Generate_Export_Methods : uses
+Customer --> Bankaccount : uses
+Customer --> Atm : uses
+Atm --> Banksystem : uses
+Bankteller --> Banksystem : uses
+Admin --> Banksystem : uses
+Banksystem --> Report : uses
+Bankaccount --> Transaction : uses
+@enduml

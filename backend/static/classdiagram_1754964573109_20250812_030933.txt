@@ -1,0 +1,6 @@
+@startuml
+class "Cash" as Cash {
+  -Customer : String
+}
+
+@enduml

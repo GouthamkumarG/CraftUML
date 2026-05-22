@@ -1,0 +1,27 @@
+@startuml
+actor Emailcommunication
+actor Reporthandler
+actor Reportcommunicator
+actor Snscommunicator
+actor Report
+actor Faultreporthandler
+actor Twittercommunicator
+(Abstract Class That Uses Reportcommunicator Send Reports)
+(Entity Content Timestamp Machineid Tostring Method)
+(Has Methods Like Setcommunicator Generatereport Createreport Sendreport)
+(Stockreporthandler Concrete Classes That Extend Reporthandler)
+(Has Endpointurl Methods Openconnection Sendreport Closeconnection)
+(Interface Generatereport Createreport Sendreport Methods)
+(Has Emailaddress Methods Openconnection Sendreport Closeconnection)
+(Emailcommunication Twittercommunicator Concrete Classes That Implement Reportcommunicator)
+(Has Apikey Methods Openconnection Sendreport Closeconnection)
+Reporthandler --> (Abstract Class That Uses Reportcommunicator Send Reports)
+Reporthandler --> (Has Methods Like Setcommunicator Generatereport Createreport Sendreport)
+Faultreporthandler --> (Stockreporthandler Concrete Classes That Extend Reporthandler)
+Report --> (Entity Content Timestamp Machineid Tostring Method)
+Reportcommunicator --> (Interface Generatereport Createreport Sendreport Methods)
+Snscommunicator --> (Emailcommunication Twittercommunicator Concrete Classes That Implement Reportcommunicator)
+Snscommunicator --> (Has Endpointurl Methods Openconnection Sendreport Closeconnection)
+Emailcommunication --> (Has Emailaddress Methods Openconnection Sendreport Closeconnection)
+Twittercommunicator --> (Has Apikey Methods Openconnection Sendreport Closeconnection)
+@enduml

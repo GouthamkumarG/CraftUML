@@ -1,0 +1,10 @@
+@startuml
+skinparam participantPadding 10
+participant Customer
+participant ATM
+participant BankSystem
+Customer -> ATM: Insert Card
+ATM -> BankSystem: Authenticate
+BankSystem --> ATM: Auth Success
+ATM --> Customer: Show Menu
+@enduml

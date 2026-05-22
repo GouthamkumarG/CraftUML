@@ -1,0 +1,28 @@
+@startuml
+class Customer {
+  Deposits
+  Name
+  Number
+  Transactions
+  Withdrawals
+}
+class Atm {
+  Bank
+}
+class Bank {
+  Customers
+  Transactions
+}
+class Admin {
+  Customers
+  User
+}
+class Employee {
+  Type
+  User
+}
+Bank --> Customers
+Customer --> Transactions
+Admin <|-- User
+Employee <|-- Type
+@enduml

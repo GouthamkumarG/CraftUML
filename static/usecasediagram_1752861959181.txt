@@ -1,0 +1,9 @@
+@startuml
+actor Customer
+(Wishes Deposit Cash)
+(Wishes Withdraw Cash)
+(Wishes Withdraw Cash Extending Into Print Statement)
+Customer --> (Wishes Withdraw Cash)
+Customer --> (Wishes Deposit Cash)
+Customer --> (Wishes Withdraw Cash Extending Into Print Statement)
+@enduml

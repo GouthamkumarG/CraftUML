@@ -1,0 +1,23 @@
+@startuml
+!theme plain
+
+actor "Admin" as Admin
+actor "Create Courses" as Create_Courses
+actor "Faculty" as Faculty
+actor "Generate Reports Register Courses" as Generate_Reports_Register_Courses
+actor "Register Courses Faculty" as Register_Courses_Faculty
+actor "Student" as Student
+
+usecase "Check Prerequisites" as Check_Prerequisites
+usecase "Create Courses" as Create_Courses
+usecase "Generate Reports" as Generate_Reports
+usecase "Register Courses" as Register_Courses
+usecase "Register Courses Faculty Wants Create Courses Admin Wishes Generate Reports Register Courses Includes Check Prerequisites Create Courses Includes Set Course Capacity" as Register_Courses_Faculty_Wants_Create_Courses_Admin_Wishes_Generate_Reports_Register_Courses_Includes_Check_Prerequisites_Create_Courses_Includes_Set_Course_Capacity
+usecase "Set Course Capacity" as Set_Course_Capacity
+
+Student --> Register_Courses
+Faculty --> Create_Courses
+Admin --> Generate_Reports
+Register_Courses ..> Check_Prerequisites : <<include>>
+Create_Courses ..> Set_Course_Capacity : <<include>>
+@enduml

@@ -1,0 +1,22 @@
+@startuml
+class "User" as User {
+}
+
+class "Name Email Attributes" as Name_Email_Attributes {
+}
+
+class "Customer" as Customer {
+  -User : String
+  +extend() : void
+}
+
+class "Order" as Order {
+}
+
+class "Items Calculatetotal" as Items_Calculatetotal {
+}
+
+User --> Name_Email_Attributes : uses
+Customer --|> User
+Order --> Items_Calculatetotal : uses
+@enduml

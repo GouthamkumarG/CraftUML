@@ -1,0 +1,12 @@
+@startuml
+!theme plain
+
+actor "Admin" as Admin
+actor "Customer" as Customer
+
+usecase "Manage Users" as ManageUsers
+usecase "Withdraw Cash" as WithdrawCash
+
+Customer --> WithdrawCash
+Admin --> ManageUsers
+@enduml

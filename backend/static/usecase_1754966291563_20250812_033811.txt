@@ -1,0 +1,17 @@
+@startuml
+actor "Admin" as Admin
+actor "Customer" as Customer
+
+usecase "Check Balance" as Check_Balance
+usecase "Customer Wishes Withdraw Cash" as Customer_Wishes_Withdraw_Cash
+usecase "Manage" as Manage
+usecase "Print Statement" as Print_Statement
+usecase "Withdraw Cash" as Withdraw_Cash
+usecase "Withdraw Cash Extending Into Print Statement" as Withdraw_Cash_Extending_Into_Print_Statement
+
+Customer --> Withdraw_Cash
+Customer --> Check_Balance
+Customer --> Withdraw_Cash_Extending_Into_Print_Statement
+Admin --> Manage
+Print_Statement ..> Customer_Wishes_Withdraw_Cash : <<extend>>
+@enduml

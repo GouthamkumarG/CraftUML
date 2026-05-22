@@ -1,0 +1,26 @@
+@startuml
+participant Twittercommunicator
+participant Emailcommunication
+participant Reporthandler
+participant Setcommunicator
+participant Methods
+participant Reportcommunicator
+participant Reports
+participant That
+participant Generatereport
+participant Snscommunicator
+participant Report
+participant Openconnection
+participant They
+participant Content
+That -> Reports: be
+Reporthandler -> Setcommunicator: have
+That -> Reporthandler: be
+They -> Generatereport: override
+Report -> Content: be
+Reportcommunicator -> Methods: be
+That -> Reportcommunicator: be
+Snscommunicator -> Openconnection: have
+Emailcommunication -> Openconnection: have
+Twittercommunicator -> Openconnection: have
+@enduml

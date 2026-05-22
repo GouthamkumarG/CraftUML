@@ -1,0 +1,19 @@
+@startuml
+!theme plain
+
+actor "Admin" as Admin
+actor "Create Courses" as Create_Courses
+actor "Faculty" as Faculty
+actor "Generate" as Generate
+actor "Register Courses Faculty" as Register_Courses_Faculty
+actor "Student" as Student
+
+usecase "Create Courses" as Create_Courses
+usecase "Generate Reports" as Generate_Reports
+usecase "Register Courses" as Register_Courses
+usecase "Register Courses Faculty Wants Create Courses Admin Wishes Generate Reports" as Register_Courses_Faculty_Wants_Create_Courses_Admin_Wishes_Generate_Reports
+
+Student --> Register_Courses
+Faculty --> Create_Courses
+Admin --> Generate_Reports
+@enduml

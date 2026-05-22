@@ -1,0 +1,12 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class Customer <<Concrete>> {
+  -cash : string
+  +wish() : void
+  +withdraw() : void
+  +wish() : void
+  +wish() : void
+  +withdraw() : void
+}
+@enduml

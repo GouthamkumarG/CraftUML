@@ -1,0 +1,12 @@
+@startuml
+participant "Customer" as Customer
+participant "Kitchen" as Kitchen
+participant "Waiter" as Waiter
+
+Customer -> Waiter: Request Menu
+Waiter -> Customer: Provide Menu
+Customer -> Waiter: Place Order
+Waiter -> Kitchen: Send Order
+Kitchen -> Waiter: Food Ready
+Waiter -> Customer: Serve Food
+@enduml

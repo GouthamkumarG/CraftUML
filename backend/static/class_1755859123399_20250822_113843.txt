@@ -1,0 +1,57 @@
+@startuml
+class "User" as User {
+}
+
+class "Id Email Attributes" as Id_Email_Attributes {
+}
+
+class "Doctor" as Doctor {
+}
+
+class "Specialization" as Specialization {
+}
+
+class "Patient" as Patient {
+}
+
+class "Medicalhistory" as Medicalhistory {
+}
+
+class "Status" as Status {
+  -Date : String
+  -Time : String
+  +attribute() : void
+}
+
+class "Appointment" as Appointment {
+}
+
+class "Date Time Status Attributes" as Date_Time_Status_Attributes {
+}
+
+class "Prescription" as Prescription {
+}
+
+class "Medication Dosage Notes Attributes" as Medication_Dosage_Notes_Attributes {
+}
+
+class "Books" as Books {
+  -Appointment : String
+}
+
+class "Issues" as Issues {
+  -Doctor : String
+  -Prescription : String
+}
+
+class "Links" as Links {
+}
+
+User --> Id_Email_Attributes : uses
+Doctor --|> User
+Doctor --> Specialization : uses
+Patient --|> User
+Patient --> Medicalhistory : uses
+Appointment --> Date_Time_Status_Attributes : uses
+Prescription --> Medication_Dosage_Notes_Attributes : uses
+@enduml

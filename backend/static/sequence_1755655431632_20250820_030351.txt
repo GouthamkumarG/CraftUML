@@ -1,0 +1,14 @@
+@startuml
+participant "Calendarservice" as Calendarservice
+participant "Clinicapp" as Clinicapp
+participant "Patient" as Patient
+participant "Paymentgateway" as Paymentgateway
+
+Patient -> Clinicapp: Book Appointment
+Clinicapp -> Calendarservice: Check Doctor Availability
+Calendarservice -> Clinicapp: Available Slots
+Patient -> Clinicapp: Confirm Slot
+Clinicapp -> Paymentgateway: Process Payment
+Paymentgateway -> Clinicapp: Payment Confirmed
+Clinicapp -> Patient: Appointment Confirmation
+@enduml

@@ -1,0 +1,12 @@
+@startuml
+participant Atm
+participant Bank
+participant Card
+participant Customer
+participant Menu
+participant Request
+Customer -> Card: insert
+Atm -> Request: send
+Bank -> Customer: verify
+Atm -> Menu: show
+@enduml

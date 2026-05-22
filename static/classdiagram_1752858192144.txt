@@ -1,0 +1,25 @@
+@startuml
+class Customer {
+  Alerts
+  Bank
+  Card
+  Name
+  Number
+}
+class Atm {
+  Bank
+  Customer
+  Keypad
+  Menu
+  Printer
+  Request
+  Screen
+}
+class Bank {
+  Accounts
+  Confirmation
+  Customer
+  Replies
+  Transactions
+}
+@enduml

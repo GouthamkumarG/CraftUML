@@ -1,0 +1,9 @@
+@startuml
+participant "Admin" as Admin
+participant "Guest" as Guest
+participant "Manage Inventory" as Manage_Inventory
+participant "Register Account" as Register_Account
+
+Register_Account -> Guest: want
+Admin -> Manage_Inventory: want
+@enduml

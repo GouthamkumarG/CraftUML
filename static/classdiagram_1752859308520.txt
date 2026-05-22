@@ -1,0 +1,48 @@
+@startuml
+class Reporthandler {
+  Class
+  Createreport
+  Methods
+  Reports
+  Sendreport
+}
+class Faultreporthandler {
+  Classes
+}
+class Report {
+  Content
+  Entity
+  Method
+  Timestamp
+}
+class Reportcommunicator {
+  Createreport
+  Interface
+  Methods
+}
+class Snscommunicator {
+  Classes
+  Closeconnection
+  Methods
+  Openconnection
+  Sendreport
+}
+class Emailcommunication {
+  Closeconnection
+  Methods
+  Openconnection
+  Sendreport
+}
+class Twittercommunicator {
+  Closeconnection
+  Methods
+  Openconnection
+  Sendreport
+}
+Reporthandler --> Reports
+Faultreporthandler <|-- Classes
+Report <|-- Entity
+Reportcommunicator <|-- Interface
+Reporthandler <|-- Class
+Snscommunicator <|-- Classes
+@enduml

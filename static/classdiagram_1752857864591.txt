@@ -1,0 +1,8 @@
+@startuml
+class Customer {
+}
+class Atm {
+}
+class Bank {
+}
+@enduml

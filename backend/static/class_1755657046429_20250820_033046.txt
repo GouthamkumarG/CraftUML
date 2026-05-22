@@ -1,0 +1,44 @@
+@startuml
+class "Account" as Account {
+}
+
+class "Id Createdat Attributes" as Id_Createdat_Attributes {
+}
+
+class "Artist" as Artist {
+  -Account : String
+  +extend() : void
+}
+
+class "Listener" as Listener {
+  -Playlist : String
+  +create() : void
+}
+
+class "Song" as Song {
+}
+
+class "Title Duration Genre Attributes" as Title_Duration_Genre_Attributes {
+}
+
+class "Playlist" as Playlist {
+  +contain() : void
+}
+
+class "Title Description Tracks Attributes" as Title_Description_Tracks_Attributes {
+}
+
+class "Player" as Player {
+}
+
+class "Play Pause Skip Methods" as Play_Pause_Skip_Methods {
+}
+
+Account --> Id_Createdat_Attributes : uses
+Artist --|> Account
+Listener --|> Account
+Song --> Title_Duration_Genre_Attributes : uses
+Playlist --> Title_Description_Tracks_Attributes : uses
+Player --> Play_Pause_Skip_Methods : uses
+Playlist --> Song : uses
+@enduml

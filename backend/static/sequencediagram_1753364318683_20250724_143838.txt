@@ -1,0 +1,12 @@
+@startuml
+participant "Admin" as Admin
+participant "Generate" as Generate
+participant "Generate Transcript" as Generate_Transcript
+participant "Librarian" as Librarian
+participant "Manage Books" as Manage_Books
+participant "View Grades" as View_Grades
+
+Admin -> Generate: wish
+Librarian -> Manage_Books: want
+Generate_Transcript -> View_Grades: extend
+@enduml

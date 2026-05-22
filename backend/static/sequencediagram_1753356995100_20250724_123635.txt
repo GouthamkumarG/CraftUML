@@ -1,0 +1,8 @@
+@startuml
+!theme plain
+
+participant "Admin" as Admin
+participant "Manage Users" as Manage_Users
+
+Manage_Users -> Admin: want
+@enduml

@@ -1,0 +1,11 @@
+@startuml
+participant "Admin" as Admin
+participant "Generate" as Generate
+participant "Manage" as Manage
+participant "Print Receipt" as Print_Receipt
+participant "Withdraw Cash" as Withdraw_Cash
+
+Withdraw_Cash -> Print_Receipt: withdraw
+Admin -> Manage: want
+Admin -> Generate: generate
+@enduml

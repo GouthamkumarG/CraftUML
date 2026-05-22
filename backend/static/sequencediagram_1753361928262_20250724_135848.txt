@@ -1,0 +1,11 @@
+@startuml
+!theme plain
+
+participant "Admin" as Admin
+participant "Guest" as Guest
+participant "Manage Inventory" as Manage_Inventory
+participant "Register Account" as Register_Account
+
+Guest -> Register_Account: want
+Admin -> Manage_Inventory: manage
+@enduml

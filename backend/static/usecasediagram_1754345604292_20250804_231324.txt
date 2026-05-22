@@ -1,0 +1,7 @@
+@startuml
+actor "Customer" as Customer
+
+usecase "Send Money" as Send_Money
+
+Customer --> Send_Money
+@enduml

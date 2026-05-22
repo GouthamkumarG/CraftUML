@@ -1,0 +1,7 @@
+@startuml
+actor Customer
+(Customer wants to withdraw cash)
+(print statement)
+Customer --> (Customer wants to withdraw cash)
+(Customer wants to withdraw cash) .> (print statement) : <<extend>>
+@enduml

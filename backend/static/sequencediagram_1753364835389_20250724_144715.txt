@@ -1,0 +1,9 @@
+@startuml
+participant "Create Courses" as Create_Courses
+participant "System" as System
+participant "University" as University
+participant "When Registration Occurs Student" as When_Registration_Occurs_Student
+
+Create_Courses -> University: create
+When_Registration_Occurs_Student -> System: Submit Registration Request. System -> Database: Check Course Availability. Database -> System: Return Available Slots.
+@enduml
