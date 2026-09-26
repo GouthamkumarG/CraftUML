@@ -1,4 +1,4 @@
-# CraftUML — AI-Powered UML Diagram Generator
+# CraftUML - AI-Powered UML Diagram Generator
 
 Converts plain English text into professional UML diagrams using NLP. Built as my MSc Computer Science final year project at the University of Dundee.
 
